@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#sizes {
+  width: 60px;
+  height: 30px;
+}
+
+#color {
+  width: 60px;
+  height: 30px;
+}
