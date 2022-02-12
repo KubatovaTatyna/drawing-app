@@ -3,28 +3,14 @@ let color = document.querySelector('#color');
 let sizes = document.querySelector('#sizes');
 let onload = document.querySelector('#onload');
 
-//Default pen size
-ctx.lineWidth = 5;
-
-//Change color
-color.addEventListener('change', event => {
-  ctx.strokeStyle = color.value;
-});
-//Change size
-sizes.addEventListener('change', event => {
-  ctx.lineWidth = sizes.value;
-});
-//Delete all
-onload.addEventListener('click', event => {
-  window.location.reload();
-});
-
 //Canva's height and width
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
 //Canva context(pen)
 let ctx = canvas.getContext("2d");
+//Default pen size
+ctx.lineWidth = 5;
 
 let prevX = null;
 let prevY = null;
@@ -53,4 +39,17 @@ window.addEventListener("mousemove", (event) => {
 
   prevX = currentX;
   prevY = currentY;
+});
+
+//Change color
+color.addEventListener('change', event => {
+  ctx.strokeStyle = color.value;
+});
+//Change size
+sizes.addEventListener('change', event => {
+  ctx.lineWidth = sizes.value;
+});
+//Delete all
+onload.addEventListener('click', event => {
+  window.location.reload();
 });
