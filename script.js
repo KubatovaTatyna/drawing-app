@@ -18,11 +18,11 @@ let prevY = null;
 let draw = false;
 
 // Set draw to true when mouse is pressed
-window.addEventListener("mousedown", (event) => draw = true);
+window.addEventListener("touchstart", (event) => draw = true);
 // Set draw to false when mouse is released
-window.addEventListener("mouseup", (event) => draw = false);
+window.addEventListener("touchend", (event) => draw = false);
 
-window.addEventListener("mousemove", (event) => {
+window.addEventListener("touchmove", (event) => {
   // if draw is false then we won't draw
   if (prevX == null || prevY == null || !draw) {
     prevX = event.x;
